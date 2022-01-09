@@ -5,7 +5,7 @@ import sys
 
 # get indexes information
 def getInfo():
-    os.system("curl -X GET 'https://localhost:9200/*/_settings?pretty' --user elastic:Tolt5Driv -k > resault")
+    os.system("curl -X GET 'https://localhost:9200/*/_settings?pretty' --user USERNAME:PASSWORD -k > resault")
 
 
 
@@ -67,7 +67,7 @@ def findReadonlyIndex():
 
 
 def RUN():
-    # getInfo()
+    getInfo()
     findReadonlyIndex()
 
 RUN()
