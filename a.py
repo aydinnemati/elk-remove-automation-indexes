@@ -10,7 +10,7 @@ import datetime as dt
 
 # get indexes information
 def getInfo():
-    os.system("curl -X GET 'https://localhost:9200/*/_settings?pretty' --user elastic:Tolt5Driv -k > resault")
+    os.system("curl -X GET 'https://localhost:9200/*/_settings?pretty' --user XXXXX:XXXXX -k > resault")
 
 
 
@@ -66,7 +66,7 @@ def removeIndexes(datetoremove):
     for removing_index in list_removing_indexes:
         stdinput = input(f'index ***\ {removing_index} /*** is going to remove, press (y) for removing it: ')
         if stdinput == "y":
-            # os.system("curl -X DELETE 'http://localhost:9200/{indextoremove}' --user XXXX:XXXX -k")
+            # os.system("curl -X DELETE 'http://localhost:9200/{indextoremove}' --user XXXX:XXXXX -k")
             print("removed")
             logging.info(f'index {removing_index} removed')
         else:
